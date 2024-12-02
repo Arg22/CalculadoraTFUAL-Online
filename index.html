@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora TFUAL</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="content-wrapper">
+        <h1>Calculadora TFUAL</h1>
+        <div class="form">
+            <div class="total">
+                <div class="total-input">
+                    <label for="total">Total ganado:</label>
+                    <input type="data" id="total" placeholder="Total Ganado" maxlength="10" oninput="this.value = this.value.replace(/[^0-9.,]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/(,.*?),.*/g, '$1').replace(/,/g, '.').replace(/^(\d+\.\d{0,2}).*$/, '$1');">
+                </div>
+            </div>
+            <div class="radio-cars">
+                <label for="cars">¿Han ido coches?</label>
+                <div class="radio-cars-group">
+                    <label class="radio-cars-input" for="yes"><input type="radio" id="showDiv" name="cars" value="show"> Sí</label>
+                    <label class="radio-cars-input" for="no"><input type="radio" id="hideDiv" name="cars" value="hide" checked>No</label>
+                </div>
+            </div>
+            <div class="cars" id="carsDiv">
+                <div class="cars-input">
+                    <label for="cars">Coches:</label>
+                    <input type="data" id="cars" placeholder="Núm. Coches" maxlength="3" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                </div>
+                <div class="cars-input">
+                    <label for="km">Kilómetros:</label>
+                    <input type="data" id="km" placeholder="Km (ida y vuelta)" maxlength="10" oninput="this.value = this.value.replace(/[^0-9.,]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/(,.*?),.*/g, '$1').replace(/,/g, '.').replace(/^(\d+\.\d{0,2}).*$/, '$1');">
+                </div>
+            </div>
+            <div class="levels">
+                <div class="levels-group">
+                    <div class="levels-input">
+                        <label for="veterans">Veteranas:</label>
+                        <input type="data" id="veterans" placeholder="Veteranas" maxlength="4" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                    </div>
+                    <div class="levels-input">
+                        <label for="jackets">Casacas:</label>
+                        <input type="data" id="jackets" placeholder="Casacas" maxlength="4" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                    </div>
+                </div>
+                <div class="levels-group">
+                    <div class="levels-input">
+                        <label for="pants">Pantalones:</label>
+                        <input type="data" id="pants" placeholder="Pantalones" maxlength="4" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                    </div>
+                    <div class="levels-input">
+                        <label for="costumes">Disfraces:</label>
+                        <input type="data" id="costumes" placeholder="Disfraces" maxlength="4" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                    </div>
+                </div>
+            </div>
+            <div class="btn-container">
+                <button class="btn" onclick="calculate()">Calcular</button>
+            </div>
+        </div>
+        <div id="form-results">
+            <h2>Resultados:</h2>
+            <ul id="list-result">
+                <li id="tuna-li">Para la Tuna: <span id="tuna-result"></span></li>
+                <li id="car-li">Cada coche: <span id="car-result"></span></li>
+                <li id="veteran-li">Cada veterana: <span id="veteran-result"></span></li>
+                <li id="jacket-li">Cada casaca: <span id="jacket-result"></span></li>
+                <li id="pant-li">Cada pantalón: <span id="pant-result"></span></li>
+                <li id="costume-li">Cada disfraz: <span id="costume-result"></span></li>
+                <li id="costume-li">Comprobación de cálculos: <span id="total-result"></span></li>
+            </ul>
+        </div>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+</html>
