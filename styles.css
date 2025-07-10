@@ -44,27 +44,27 @@ h2 {
   align-items: center;
   padding: 10px; }
 
-.radio-cars {
+.radio-coches {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   padding: 10px;
   border-top: 1px dashed #1899D6; }
-  .radio-cars label {
+  .radio-coches label {
     width: 150px; }
-    .radio-cars label.radio-cars-input {
+    .radio-coches label.radio-coches-input {
       width: 55px; }
-  .radio-cars-group {
+  .radio-coches-group {
     display: flex;
     flex: 50%;
     align-items: center;
     padding: 10px; }
 
-.cars {
+.coches {
   display: none;
   flex-wrap: wrap;
   gap: 25px; }
-  .cars-input {
+  .coches-input {
     display: flex;
     align-items: center;
     padding: 10px; }
@@ -147,8 +147,15 @@ input {
   width: 100%;
   min-height: 200px; }
 
-@media screen and (max-width: 576px) {
-  .total {
-    flex-wrap: wrap; }
-  .levels-group {
-    gap: unset; } }
+#total-li {
+  color: gray; }
+
+ul {
+  margin: 0;
+  max-width: 360px; }
+
+hr {
+  margin: 5px 0 5px 20px;
+  border: 0;
+  border-top: 1px dashed #1899D6;
+  width: 240px; }

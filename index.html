@@ -15,19 +15,19 @@
                     <input type="data" id="total" placeholder="Total Ganado" maxlength="10" oninput="this.value = this.value.replace(/[^0-9.,]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/(,.*?),.*/g, '$1').replace(/,/g, '.').replace(/^(\d+\.\d{0,2}).*$/, '$1');">
                 </div>
             </div>
-            <div class="radio-cars">
-                <label for="cars">¿Han ido coches?</label>
-                <div class="radio-cars-group">
-                    <label class="radio-cars-input" for="yes"><input type="radio" id="showDiv" name="cars" value="show"> Sí</label>
-                    <label class="radio-cars-input" for="no"><input type="radio" id="hideDiv" name="cars" value="hide" checked>No</label>
+            <div class="radio-coches">
+                <label for="coches">¿Han ido coches?</label>
+                <div class="radio-coches-group">
+                    <label class="radio-coches-input" for="yes"><input type="radio" id="showDiv" name="coches" value="show"> Sí</label>
+                    <label class="radio-coches-input" for="no"><input type="radio" id="hideDiv" name="coches" value="hide" checked>No</label>
                 </div>
             </div>
-            <div class="cars" id="carsDiv">
-                <div class="cars-input">
-                    <label for="cars">Coches:</label>
-                    <input type="data" id="cars" placeholder="Núm. Coches" maxlength="3" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+            <div class="coches" id="cochesDiv">
+                <div class="coches-input">
+                    <label for="coches">Coches:</label>
+                    <input type="data" id="coches" placeholder="Núm. Coches" maxlength="3" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
                 </div>
-                <div class="cars-input">
+                <div class="coches-input">
                     <label for="km">Kilómetros:</label>
                     <input type="data" id="km" placeholder="Km (ida y vuelta)" maxlength="10" oninput="this.value = this.value.replace(/[^0-9.,]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/(,.*?),.*/g, '$1').replace(/,/g, '.').replace(/^(\d+\.\d{0,2}).*$/, '$1');">
                 </div>
@@ -35,22 +35,22 @@
             <div class="levels">
                 <div class="levels-group">
                     <div class="levels-input">
-                        <label for="veterans">Veteranas:</label>
-                        <input type="data" id="veterans" placeholder="Veteranas" maxlength="4" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                        <label for="veteranas">Veteranas:</label>
+                        <input type="data" id="veteranas" placeholder="Veteranas" maxlength="4" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
                     </div>
                     <div class="levels-input">
-                        <label for="jackets">Casacas:</label>
-                        <input type="data" id="jackets" placeholder="Casacas" maxlength="4" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                        <label for="casacas">Casacas:</label>
+                        <input type="data" id="casacas" placeholder="Casacas" maxlength="4" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
                     </div>
                 </div>
                 <div class="levels-group">
                     <div class="levels-input">
-                        <label for="pants">Pantalones:</label>
-                        <input type="data" id="pants" placeholder="Pantalones" maxlength="4" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                        <label for="pantalones">Pantalones:</label>
+                        <input type="data" id="pantalones" placeholder="Pantalones" maxlength="4" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
                     </div>
                     <div class="levels-input">
-                        <label for="costumes">Disfraces:</label>
-                        <input type="data" id="costumes" placeholder="Disfraces" maxlength="4" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                        <label for="disfraces">Disfraces:</label>
+                        <input type="data" id="disfraces" placeholder="Disfraces" maxlength="4" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
                     </div>
                 </div>
             </div>
@@ -60,14 +60,21 @@
         </div>
         <div id="form-results">
             <h2>Resultados:</h2>
-            <ul id="list-result">
+            <ul id="list-result-head">
                 <li id="tuna-li">Para la Tuna: <span id="tuna-result"></span></li>
-                <li id="car-li">Cada coche: <span id="car-result"></span></li>
-                <li id="veteran-li">Cada veterana: <span id="veteran-result"></span></li>
-                <li id="jacket-li">Cada casaca: <span id="jacket-result"></span></li>
-                <li id="pant-li">Cada pantalón: <span id="pant-result"></span></li>
-                <li id="costume-li">Cada disfraz: <span id="costume-result"></span></li>
-                <li id="costume-li">Comprobación de cálculos: <span id="total-result"></span></li>
+                <li id="coches-li">Cada coche: <span id="coches-result"></span></li>
+            </ul>
+            <hr>
+            <ul id="list-result-body">
+                <li id="veteranas-li">Cada veterana: <span id="veteranas-result"></span></li>
+                <li id="casacas-li">Cada casaca: <span id="casacas-result"></span></li>
+                <li id="pantalones-li">Cada pantalón: <span id="pantalones-result"></span></li>
+                <li id="disfraces-li">Cada disfraz: <span id="disfraces-result"></span></li>
+            </ul>
+            <hr>
+            <ul id="list-result-footer">
+                <li id="bote-li">Bote de novatas: <span id="bote-result"></span></li>
+                <li id="total-li">Comprobación de cálculos: <span id="total-result"></span></li>
             </ul>
         </div>
     </div>
