@@ -19,6 +19,7 @@ function calculate() {
   const totalIncial = parseFloat(document.getElementById('total').value);
   let total = totalIncial;
   let gasolina = 0;
+  let gasolinaTotal = 0;
   const hayCoches = document.querySelector('input[name="coches"]:checked').value === "show";
   const coches = parseInt(document.getElementById('coches').value) || 0;
   const km = parseFloat(document.getElementById('km').value) || 0;
@@ -34,8 +35,9 @@ function calculate() {
 
   // Calculamos gasolina para cada coche
   if (hayCoches && coches > 0 && km > 0) {
-    gasolina = redondeoDecimales(coches * km * KM_PERCENT);
-    total -= gasolina;
+    gasolinaTotal = redondeoDecimales(coches * km * KM_PERCENT);
+    gasolina = redondeoDecimales(km * KM_PERCENT);  // <- gasolina por coche
+    total -= gasolinaTotal;
   }
   
   // Sacámos porcentaje de la Tuna
@@ -103,9 +105,6 @@ function calculate() {
       prendaCalculada.pantalones * datos.pantalones +
       prendaCalculada.disfraces * datos.disfraces +
       bote);
-
-
-
 
   // Mostrar resultados
   document.getElementById('tuna-result').innerText = fondoTuna;
