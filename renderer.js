@@ -109,6 +109,7 @@ function calculate() {
   // Mostrar resultados
   document.getElementById('tuna-result').innerText = fondoTuna;
   document.getElementById('coches-result').innerText = gasolina;
+  document.getElementById('coches-total-result').innerText  = gasolinaTotal;
   document.getElementById('veteranas-result').innerText = redondeoDecimales(prendaCalculada.veteranas);
   document.getElementById('casacas-result').innerText = redondeoDecimales(prendaCalculada.casacas);
   document.getElementById('pantalones-result').innerText = redondeoDecimales(prendaCalculada.pantalones);
