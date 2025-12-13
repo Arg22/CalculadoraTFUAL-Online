@@ -19,6 +19,7 @@ function calculate() {
   const totalIncial = parseFloat(document.getElementById('total').value);
   let total = totalIncial;
   let gasolina = 0;
+  let gasolinaIndividual = 0;
   const hayCoches = document.querySelector('input[name="coches"]:checked').value === "show";
   const coches = parseInt(document.getElementById('coches').value) || 0;
   const km = parseFloat(document.getElementById('km').value) || 0;
